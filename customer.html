@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Customer Registration</title>
+        <!--
+            Assessment: CST8285 Lab Exercise 02
+            Class: CST8285 300
+            Student Name: Ziyao Tang (041085557)
+            Create Date: May 17, 2023
+            Lab Section Number: CST8285 301
+            Professor Name: Hala Own, Alemeseged Legesse
+        -->
+        <meta name="description" content="The Customer page for Lab 2">
+        <meta name="keywords" content="Customer Lab Form Application">
+        <meta name="author" content="Ziyao Tang">
+    </head>
+
+    <body>
+
+        <div>
+            <h1>Customer Registration</h1>
+            <form action="Lab2Form.php" method="post" enctype="text/plain">
+                
+                <fieldset>
+                    <legend>1. User Info</legend>
+                    <table>
+                        <tr>
+                            <td><label for="firstname" >First Name</label><br><input type="text" name="firstname" id="firstname" size="20" value="Ziyao" readonly ></td>
+                            <td><label for="lastname">Last Name</label><br><input type="text" name="lastname" id="lastname" size="20" maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="email">Email</label><br><input type="email" name="email" id="email" size="56" placeholder ="format for email is xxx@yyy.zzz"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password</label><br><input type="password" name="password" id="password" size="20" minlength="8" placeholder="at least 8 characters"></td>
+                            <td><label for="passwordrepeat">Password Repeat</label><br><input type="password" name="passwordrepeat" id="passwordrepeat" size="20" minlength="8" placeholder="at least 8 characters"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Location</legend>
+                    <table>
+                        <tr>
+                            <td colspan="3"><label for="address" >Address</label><br><input type="text" name="address" id="address" size="56"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">City</label><br><input type="text" name="city" id="city" size="20" ></td>
+                            <td><label for="state">State</label><br><input type="text" name="state" id="state" size="4"></td>
+                            <td><label for="zip">Zip</label><br><input type="text" name="zip" id="zip" size="8"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Phone</label><br><input type="tel" id="phone" name="phone" placeholder="NNN-NNN-NNNN" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+                            <td colspan="2">
+                                <label for="country">Country</label><br>
+                                <select name="country" id="country"  size ="1">
+                                    <option value="canada" selected>Canada</option>
+                                    <option value="unitedstates">United States</option>
+                                    <option value="mexico">Mexico</option>
+                                    <option value="cuba">Cuba</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Continent</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="radio" id="continent1" name="continent" value="North America"><label for="continent1">North America</label><br>
+                                <input type="radio" id="continent2" name="continent" value="Europe"><label for="continent2">Europe</label><br>
+                                <input type="radio" id="continent3" name="continent" value="South America"><label for="continent3">South America</label>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Personal Details</legend>
+                    <table>
+                        <tr>
+                            <td><label for="birthday" >Birth day</label><br><input type="date" name="birthday" id="birthday"></td>
+                            <td><label for="favoritecolor">Favorite Color</label><br><input type="color" id="favoritecolor" name="favoritecolor" value="#000000"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <h2>4. All Done</h2>
+                <input type="checkbox" id="agreement" name="agreement" value="agree">
+                <label for="agreement"> I agree to the <a href="customer.html">Terms of the Site</a></label><br>
+                <input type="submit" value="send">
+                <input type="reset" value="Clear information">
+            </form>
+        </div>
+        <div>
+            <footer>
+                <p>Ziyao Tang, 2023 Copyright.
+                </p>
+            </footer>
+        </div>
+        
+    </body>
+</html>
